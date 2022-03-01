@@ -1,36 +1,33 @@
 # Token
-ERC20 Token implementation using OpenZeppelin with tests in JS.
-Using Truffle IDE + Ganache CLI 
-Some basic ERC20 tests were run.
-Contracts were then deployed successfully on Kovan and Ropsten.
+ERC20 Token implementation using OpenZeppelin's ERC20 contract instead of creating it from scratch.
+Environment:  Truffle IDE + Ganache CLI, TestNets: Kovan,Ropsten
 
-Wallet setup:
-Install the following dependencies:
+Some basic ERC20 tests were implemented to explore the concepts.
+Contracts were then deployed successfully locally on Ganache and on testnets Kovan and Ropsten.
+
+To deploy on testnets use the below setup:
+
   "dependencies": {
     "@openzeppelin/contracts": "^4.5.0",
     "@truffle/hdwallet-provider": "^2.0.3",
     "dotenv": "^16.0.0",
     "mnemonics": "^1.1.3"
   }
-And in the 'truffle-config.js' include the following lines on the top
+In the 'truffle-config.js' include the following lines on the top
 
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 require("dotenv").config()
 
-Create either a .env or a secrets.json file. 
-Ensure that they're listed in the .gitignore
-Create an Infuria project ID at: https://infura.io
+Create either a .env file and listed in .gitignore so it doesn't get committed to the Github.
 
-The .env file will look something like this:
+Create an Infuria project ID at: https://infura.io and include it along with the private key in the .env file.
+
+The .env file will look like this:
 INFURA_API_KEY = "xxxxx"  //This is the Infuria project id
 DEPLOYMENT_ACCOUNT_KEY = "xxxxx"  //This is your private key from a Metamask account
-MNEMONIC = "xxx xxxx" //This can be used instead of the private key.
 
-You only need the INFURA_API_KEY & DEPLOYMENT_ACCOUNT_KEY OR
-INFURA_API_KEY & MNEMONIC
 
-No need for both. 
-
+Links to get testnet ETH as shown below so you don't have to google them:
 
 Ropsten Faucet: https://www.moonborrow.com/
 Ropsten EtherScan: https://ropsten.etherscan.io/tx/0x01a532edd1e807df8bb1d4e8097ba7322e5c578ba41b390446d56ba3b76c0af4
