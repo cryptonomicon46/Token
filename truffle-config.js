@@ -49,8 +49,8 @@ module.exports = {
      network_id: 5777,       // Any network (default: none)
     },
     kovan: {
-        provider:  ()=> new HDWalletProvider(privateKey, "https://kovan.infura.io/v3/" + projectId),
-        // provider: new HDWalletProvider(process.env.DEPLOYMENT_ACCOUNT_KEY, "https://kovan.infura.io/v3/" + process.env.INFURA_API_KEY),
+        // provider:  ()=> new HDWalletProvider(privateKey, "https://kovan.infura.io/v3/" + projectId),
+        provider: new HDWalletProvider(process.env.DEPLOYMENT_ACCOUNT_KEY, "https://kovan.infura.io/v3/" + process.env.INFURA_API_KEY),
 	    network_id: 42,
 	    gas: 5000000,
 		gasPrice: 5000000000, // 5 Gwei
