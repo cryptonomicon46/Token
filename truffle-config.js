@@ -24,9 +24,6 @@ require("dotenv").config()
 // const fs = require('fs');
 // const mnemonic = fs.readFileSync(".secret").toString().trim();
 const { projectId, mnemonic, privateKey} = require('./secrets.json');
-console.log(projectId)
-console.log(mnemonic)
-console.log(privateKey)
 
 module.exports = {
   /**
@@ -76,7 +73,9 @@ module.exports = {
         //   process.env.MNEMONIC,
         //   `https://ropsten.infura.io/v3/${process.env.INFURA_API_KEY}`
         // ),  
-    provider: ()=> new HDWalletProvider(mnemonic, "https://ropsten.infura.io/v3/" + projectId),
+    // provider: ()=> new HDWalletProvider(mnemonic, "https://ropsten.infura.io/v3/" + projectId),
+    provider: ()=> new HDWalletProvider(privateKey, "https://ropsten.infura.io/v3/" + projectId),
+
   
     network_id: 3,       // Ropsten's id
     gas: 5500000,        // Ropsten has a lower block limit than mainnet
