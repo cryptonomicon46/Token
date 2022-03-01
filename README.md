@@ -1,4 +1,6 @@
-# Token
+# Token. 
+ENS: cryptosandman.eth
+
 ERC20 Token implementation using OpenZeppelin's ERC20 contract instead of creating it from scratch.
 Environment:  Truffle IDE + Ganache CLI, TestNets: Kovan,Ropsten
 
