@@ -40,10 +40,10 @@ Kovan Faucet: https://faucets.chain.link/rinkeby
 Kovan Etherscan: https://kovan.etherscan.io/tx/0xca7cbe10e68a6be4e778676b45f359bb67f1d53fd95c6d9209c9ff1c6f24321c
 
 
-truffle test --network kovan  
 
-Results:
-Using network 'kovan'.
+Test Output:
+$ truffle test --network kovan  
+
 
 
 Compiling your contracts...
