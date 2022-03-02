@@ -38,3 +38,32 @@ Ropsten EtherScan: https://ropsten.etherscan.io/tx/0x01a532edd1e807df8bb1d4e8097
 
 Kovan Faucet: https://faucets.chain.link/rinkeby
 Kovan Etherscan: https://kovan.etherscan.io/tx/0xca7cbe10e68a6be4e778676b45f359bb67f1d53fd95c6d9209c9ff1c6f24321c
+
+
+truffle test --network kovan  
+
+Results:
+Using network 'kovan'.
+
+
+Compiling your contracts...
+===========================
+> Everything is up to date, there is nothing to compile.
+
+
+  Contract: Token
+10000
+    ✓ Get Initial supply in the contract (265ms)
+18
+    ✓ Token Information (905ms)
+    ✓ Normal transfer without approval (4112ms)
+    ✓ Set Allowance of 100 on accounts1 (10897ms)
+    ✓ Transfer 10000 tokens to acounts1 (12010ms)
+    ✓ Transfer 10001 acounts1 should fail (544ms)
+9980
+    ✓ Accounts0 approves accounts1 to 100 and withdraws 10 once (12088ms)
+Not enough allowance: true
+    ✓ Approve accounts1 to 100 and then transfer 50 and 60 (19494ms)
+
+
+  8 passing (2m)
